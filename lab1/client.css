@@ -1,0 +1,188 @@
+body{
+   
+}
+
+.main{
+	height:400px;
+	width:600px;
+	margin: 0 auto;
+    margin-top:100px;
+}
+
+#logo{
+	height:400px;
+	width:340px;
+	float:left;
+}
+
+.form{
+	height:120px;
+	width:250px;
+	float:right;
+	background-color: #ddffdd;
+	border :none;
+    overflow: auto;
+}
+
+.form label, .form input
+    {
+        display: block;
+        width: 120px;
+        float: left;
+        margin-bottom: 2px;
+    }
+    
+
+.form label{
+	text-align: left;
+    padding-right: 2px;
+    font-size:14px;
+}
+
+label{
+	margin-left: 2px;
+}
+
+
+.form2{
+	height:260px;
+	width:250px;
+	float:right;
+	background-color: #ddffdd;
+	border :none;
+    overflow: auto;
+}
+
+.form2 label, .form2 input
+    {
+        display: block;
+        width: 120px;
+        height:8px;
+        float: left;
+        margin-bottom: 2px;
+        font-size:10px;
+    }
+    
+.form2 select{
+	text-align: left;
+    padding-right: 2px;
+    font-size:10px;
+    display: block;
+	width: 120px;
+	height:18px;
+	float: left;
+	margin-bottom: 10px;
+}
+    
+
+.form2 label{
+	text-align: left;
+    padding-right: 2px;
+    
+}
+
+.btn{
+	float:right;
+	width:50px;
+	margin-right:10px;
+}
+
+
+h3{
+font-size:14px;
+text-align:center;
+}
+
+.tabs {
+  position: relative;   
+  clear: both;
+  height:400px;
+  width:600px;
+  margin: 0 auto;
+  margin-top:100px;
+}
+.tab {
+  float: left;
+}
+.tab label {
+  background: #eee; 
+  padding: 10px; 
+  border: 1px solid #ccc; 
+  margin-left: -1px; 
+  position: relative;
+  left: 1px; 
+}
+.tab [type=radio] {
+  display: none;   
+}
+.content {
+  position: absolute;
+  top: 28px;
+  left: 0;
+  background-color: #ddffdd;
+  right: 0;
+  bottom: 0;
+  padding: 20px;
+  border: 1px solid #ccc; 
+    overflow: auto;
+}
+[type=radio]:checked ~ label {
+  background: white;
+  border-bottom: 1px solid white;
+  z-index: 2;
+}
+[type=radio]:checked ~ label ~ .content {
+  z-index: 1;
+}
+
+.changepwdform{
+    background-color: #ffffff;
+    width: 200px;
+    height:160px;
+	float:left;
+	border-style: solid;
+    border-width: 1px;
+    overflow: auto;
+    margin-top: 30px;
+}
+
+.changepwdform label, .changepwdform input
+    {
+        height:8px;
+        margin-bottom: 2px;
+        font-size:8px;
+         padding: 0px;
+        float:left;
+            margin-left: 3px;
+
+    }
+.changepwdform label{
+    width:70px;
+	text-align: left;
+    padding-right: 2px;
+}
+
+.persinfo{
+    float:left;
+    background-color: bisque;
+    height: 100%;
+    width:50%;
+    border-style: groove;
+    border-width: 1px;
+}
+.wall{
+    float:right;
+    border-style: groove;
+    border-width: 1px;
+    background-color: bisque;
+    height: 100%;
+    width:49%;
+    overflow: auto;
+}
+
+.postbox{
+    margin-top: 30px;
+    float:left;
+    width:90%;
+    height:20%;
+}

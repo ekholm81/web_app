@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<link href="client.css" type="text/css" rel="stylesheet">
+        <script id="browseoriginalhtml" type="/text/view"> 
+                    <p> Find user:</p><br>
+                        <div>
+                              <label style="font-size:12px;">Email:</label>
+                              <input id="bemail" style="height:20px; width:180px;" type="email" value="">
+                              <br><br>
+                              <input onclick="browse()" style="height:40px; width:80px;" type="submit" value="Go">
+				       </div> </script>
+		<script src="client.js" type="text/javascript"></script>
+		<script src="serverstub.js" type="text/javascript"></script>
+        <script id="browsehtml" type="text/view"> 
+                <div class="persinfo">
+                   <pre style="font-size:14px;"> Personal info</pre>
+                   <pre id="bpre"></pre>
+                   <textarea class="postbox" id="bpb"></textarea> 
+                   <input onclick="bpost()" style="height:25px; width:90px; " type="submit" value="Post">                          
+                   <input onclick="breturn()" style="height:25px; width:90px; float; right;" type="submit" value="Return">                          
+               </div>
+               <div class="wall">
+                 <pre style="font-size:15px; padding-bottom:8px;"> Wall</pre>
+                 <pre id="bwallpre"></pre>
+                 <input onclick="bupdate()" id="updatebtn" style="float: left;height:25px; width:90px; margin-bottom:20px;" type="submit" value="Reload">
+               </div>
+        </script>
+		<script id="profileview" type="text/view">
+			<div class="tabs">
+               <div class="tab">
+                   <input type="radio" id="tab-1" name="tab-group-1" checked>
+                   <label for="tab-1">Home</label>
+                   <div id="hometab" class="content">
+                      <div class="persinfo">
+                        <pre style="font-size:14px;"> Personal info</pre>
+                        <pre id="pre"></pre>
+                        <textarea class="postbox" id="pb"></textarea> 
+                        <input onclick="post()" id="postbtn" style="height:25px; width:90px; " type="submit" value="Post">                          
+                       </div>
+                     <div class="wall">
+                        <pre style="font-size:15px; padding-bottom:8px;"> Wall</pre>
+                        <pre id="wallpre"></pre>
+                        <input onclick="update()" id="updatebtn" style="float: left;height:25px; width:90px; margin-bottom:20px;" type="submit" value="Reload">
+                     </div>
+                  </div> 
+               </div>
+
+               <div class="tab">
+                   <input type="radio" id="tab-2" name="tab-group-1">
+                   <label for="tab-2">Browse</label>
+
+                   <div id="browsetab" class="content">
+                       <p> Find user:</p><br>
+                       <div>
+                              <label style="font-size:12px;">Email:</label>
+                              <input id="bemail" style="height:20px; width:180px;" type="email" value="">
+                              <br><br>
+                              <input onclick="browse()" style="height:40px; width:80px;" type="submit" value="Go">
+				       </div> 
+                   </div> 
+               </div>
+
+                <div class="tab">
+                   <input type="radio" id="tab-3" name="tab-group-1">
+                   <label for="tab-3">Account</label>
+                   <div class="content">
+                      <p> Account content</p>
+                       <form class="changepwdform">
+                            <p style="float:left; font-size:10px; margin-bottom:0px;     margin-left: 3px;">Change Password</p><br><br>
+                            <label>Old pwd:</label>
+                            <input id="oldpwd" type="password" required><br>
+                            <label>New pwd:</label>
+                            <input id="newpwd" type="password" required><br>
+                            <label>Repeat pwd:</label>
+                            <input id="reppwd" type="password" required><br>
+                            <input onclick="return changepwd()" id="btn" style="height:25px; float:left; margin-right:5px; width:90px;" type="submit" value="Apply">	
+				        </form> 		
+                       <input onclick="signout()" id="signout" style="height:25px; width:90px; margin-top: 250px;" type="submit" value="Sign out">
+                   </div> 
+               </div>
+
+            </div>
+		</script>
+		<script id="welcomeview" type="text/view">
+			<div class="main">
+				<div id="logo">
+					<img src="wimage.png">
+				</div>
+				<div class="form">
+					<br>
+					<label>Email:</label>
+					<input id="email" type="email" required><br>
+					<label>Password:</label>
+					<input id="pass" type="password" required><br>
+					<input onclick="return btnfunc()" id="btn" style="height:25px; float:right; margin-right:5px; width:90px;" type="submit" value="login">		
+				</div> 			
+				<div class="form2"  style="margin-top:10px; height:270px;" >
+					<h3 >Sign up here</h3>
+					<label>First name:</label>
+					<input id="fn" ><br>
+				    <label>Family name:</label>
+					<input id="ln" ><br>		
+					<label>Gender:</label>
+					<select id="s">
+						<option>Male</option>
+						<option>Female</option>
+						<option>Something else</option>
+					</select><br>	
+					<label>City:</label>
+					<input id="city"><br>
+					<label>Country:</label>
+					<input id="country" ><br>
+					<label>Email:</label>
+					<input id="semail" type="email" ><br>
+					<label>Password:</label>
+					<input type="password" id="spass" ><br>
+					<label>Repeat PWD:</label>
+					<input type="password" id="srpass" ><br>
+					<input onclick="btnfunc2()" id="sbtn" style="height:25px; float:right; margin-right:5px; width:90px;" type="submit" value="Signup">	
+				</div> 
+			</div>
+		</script>
+	</head>
+	<body background="br.jpg">
+		<div id="maindiv">
+		
+		</div>
+	</body>
+</html>
