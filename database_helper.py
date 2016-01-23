@@ -60,11 +60,12 @@ def is_user_logged_in(token):
     
 def signin_user(email,token):
 	con=connect()
+	cur=con.cursor()
 	data=(email,token)
 	try:
 		con.execute('''INSERT INTO logged_in_users VALUES(?, ?)''', data)
-		con.commit
-		return true
+		con.commit()
+		return True
 	except Exception,e:
 		print "______"+str(e)
 		return False
@@ -73,7 +74,7 @@ def update_pass(email,new_pwd):
 	con=connect()
 	cur=con.cursor()
 	try:
-		cur.exectue('''UPDATE users SET password=?''',(new_pwd,email))
+		cur.execute('''UPDATE users SET password=?''',(new_pwd,email))
 		conn.commit()
 		return True
 	except Exception,e:
@@ -129,7 +130,46 @@ def get_user_by_email(email):
 		print "______"+str(e)
 		return False
 		
-def messages_by_email
+def messages_by_email(email):
+	con=connect()
+	cur=con.cursor()
+	email=(email,)
+	try:
+		cur.execute('''SELECT message FROM posts WHERE fr=?''')
+	except Exception,e:
+		print "______"+str(e)
+		return False
+	res= cur.fetchall()
+	msg=[]
+	for i in res:
+		msg.append(res[i])
+	return msg
+
+def messages_by_token(token):
+	con=connect()
+	cur=con.cursor()
+	email=(get_email_by_token(token),)
+	try:
+		cur.execute('''SELECT message FROM posts WHERE fr=?''')
+	except Exception,e:
+		print "______"+str(e)
+		return False
+	res= cur.fetchall()
+	msg=[]
+	for i in res:
+		msg.append(res[i])
+	return msg
+
+def post_msg(s_email,r_email,text):
+	con=connect()
+	cur=conn.cursor()
+	try:
+		cur.execute('''INSERT INTO posts VALUES (?, ?, ?)''',(s_email,r_email,text))
+		conn.commit()
+		return True
+	except:
+		print "______"+str(e)
+		return False	
 		
 def close_db():
 	get_db.close()
