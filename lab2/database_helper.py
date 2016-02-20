@@ -2,7 +2,7 @@ import sqlite3 as sq
 import flask as f
 #Database tables: users, logged_in_users, messages
 def connect():
-	return sq.connect("../database.db");
+	return sq.connect("database.db");
 
 def get_db():
 	db=getattr(f,'db',None);
